@@ -1,0 +1,108 @@
+.navbar-mobile-section {
+  background-color: #272727;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-mobile-section {
+    display: none;
+  }
+}
+
+.mobile-view-logo {
+  height: 25px;
+}
+
+.link-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 150px;
+}
+
+.home-icon {
+  color: #ffffff;
+  height: 30px;
+  width: 30px;
+}
+
+.bag-icon {
+  color: #ffffff;
+  height: 30px;
+  width: 30px;
+}
+
+.logout-icon {
+  color: #ffffff;
+  height: 30px;
+  width: 30px;
+}
+
+.navbar-desktop-section {
+  background-color: #272727;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-desktop-section {
+    display: none;
+  }
+}
+
+.desktop-view-logo {
+  height: 35px;
+}
+
+.unordered-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.home {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.job {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.logout-desktop-btn {
+  height: 28px;
+  width: 100px;
+  border-width: 0;
+  border-radius: 4px;
+  background-color: #6366f1;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+.logout-icon-btn {
+  background-color: transparent;
+  border-width: 0;
+  cursor: pointer;
+  outline: none;
+}
