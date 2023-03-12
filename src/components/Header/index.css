@@ -17,6 +17,10 @@
   height: 25px;
 }
 
+.unordered-list-header {
+  list-style-type: none;
+}
+
 .link-section-container {
   display: flex;
   align-items: center;

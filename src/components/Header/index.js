@@ -15,35 +15,47 @@ const Header = props => {
     <div className="navbar-bg-container">
       <div className="navbar-mobile-view">
         <nav className="navbar-mobile-section">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-            alt="website logo"
-            className="mobile-view-logo"
-          />
-          <div className="link-section-container">
+          <ul className="unordered-list-header">
             <Link to="/">
-              <AiFillHome className="home-icon" />
+              <li>
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+                  alt="website logo"
+                  className="mobile-view-logo"
+                />
+              </li>
             </Link>
-            <Link to="/jobs">
-              <BsFillBriefcaseFill className="bag-icon" />
-            </Link>
-            <button
-              type="button"
-              onClick={onLogout}
-              className="logout-icon-btn"
-            >
-              <BsArrowBarRight className="logout-icon" />
-            </button>
-          </div>
+            <div className="link-section-container">
+              <Link to="/">
+                <li>
+                  <AiFillHome className="home-icon" />
+                </li>
+              </Link>
+              <Link to="/jobs">
+                <li>
+                  <BsFillBriefcaseFill className="bag-icon" />
+                </li>
+              </Link>
+              <button
+                type="button"
+                onClick={onLogout}
+                className="logout-icon-btn"
+              >
+                <BsArrowBarRight className="logout-icon" />
+              </button>
+            </div>
+          </ul>
         </nav>
       </div>
       <div className="navbar-desktop-view">
         <nav className="navbar-desktop-section">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-            alt="website logo"
-            className="desktop-view-logo"
-          />
+          <Link to="/">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+              alt="website logo"
+              className="desktop-view-logo"
+            />
+          </Link>
           <ul className="unordered-list">
             <Link to="/">
               <li className="home">Home</li>

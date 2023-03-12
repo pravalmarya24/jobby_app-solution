@@ -22,7 +22,7 @@ const JobItems = props => {
             className="company-logo"
           />
           <div className="company-title-card-container">
-            <p className="company-title-para">{title}</p>
+            <h1 className="company-title-para">{title}</h1>
             <div className="rating-card">
               <BsFillStarFill className="star-size" />
               <p className="rating-para">{rating}</p>

@@ -162,7 +162,7 @@ class Jobs extends Component {
           {this.renderProfileViews()}
         </div>
         <hr className="horizontal-line" />
-        <p className="employment-para">Type of Employment</p>
+        <h1 className="employment-para">Type of Employment</h1>
         <ul className="unordered-list">
           {employmentTypesList.map(each => (
             <li className="list" key={each.employmentTypeId}>
@@ -178,7 +178,7 @@ class Jobs extends Component {
           ))}
         </ul>
         <hr className="horizontal-line" />
-        <p className="employment-para">Salary Range</p>
+        <h1 className="employment-para">Salary Range</h1>
         <ul className="unordered-list">
           {salaryRangesList.map(each => (
             <li className="list" key={each.salaryRangeId}>
@@ -245,7 +245,7 @@ class Jobs extends Component {
       />
       <p className="no-jobs-para">No Jobs Found</p>
       <p className="try-other-filter-para">
-        we could not find any jobs. Try other filter
+        We could not find any jobs. Try other filters
       </p>
     </div>
   )
@@ -267,6 +267,7 @@ class Jobs extends Component {
               className="search-icon-btn"
               type="button"
               onClick={this.onClickingSearchIcon}
+              data-testid="searchButton"
             >
               <BsSearch className="job-search-icon" />
             </button>
