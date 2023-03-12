@@ -1,0 +1,164 @@
+.job-item-list {
+  list-style-type: none;
+}
+
+.job-item-card-container {
+  border-width: 0px;
+  border-radius: 10px;
+  background-color: #202020;
+  height: 320px;
+  width: 430px;
+  padding: 20px;
+  margin: 14px;
+  margin-left: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .job-item-card-container {
+    height: 320px;
+    width: 700px;
+  }
+}
+
+.comapny-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.company-title-card-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+.company-title-para {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 500;
+  color: #f1f5f9;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .company-title-para {
+    font-size: 18px;
+  }
+}
+
+.rating-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.company-logo {
+  height: 55px;
+  width: 51px;
+}
+
+.rating-card {
+  display: flex;
+  height: 20px;
+}
+
+.star-size {
+  color: #fbbf24;
+  height: 15px;
+  width: 15px;
+  padding-top: 0;
+}
+
+.rating-para {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  color: #f1f5f9;
+  padding-left: 9px;
+}
+
+.location-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.location-employment-container {
+  display: flex;
+  align-items: center;
+}
+
+.location-card {
+  display: flex;
+  align-items: center;
+}
+
+.location-icon {
+  color: #f1f5f9;
+  height: 22px;
+  width: 22px;
+}
+
+.location-para {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  color: #f1f5f9;
+  padding-left: 7px;
+}
+
+.employment-card {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.employ-bag-icon {
+  color: #f1f5f9;
+  height: 20px;
+  width: 20px;
+}
+
+.employment-para {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  color: #f1f5f9;
+  padding-left: 7px;
+}
+
+.salary-para {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  color: #f1f5f9;
+}
+
+.description-heading {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  color: #f1f5f9;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 576px) {
+  .description-heading {
+    font-size: 18px;
+  }
+}
+
+.description-para {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  color: #f1f5f9;
+}
+
+@media screen and (min-width: 576px) {
+  .description-para {
+    font-size: 16px;
+  }
+}
