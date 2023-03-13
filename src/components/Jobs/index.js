@@ -57,11 +57,13 @@ class Jobs extends Component {
     apiStatus: apiStatusUpdates.initial,
     jobsList: [],
     searchInput: '',
+    jobDetailViewList: [],
   }
 
   componentDidMount = () => {
     this.getProfileDetails()
     this.getJobItems()
+    this.getJobDetailView()
   }
 
   renderLoader = () => (
@@ -230,8 +232,6 @@ class Jobs extends Component {
     } else {
       this.setState({apiStatus: apiStatusUpdates.failure})
     }
-    console.log(data)
-    console.log(response)
   }
 
   onClickingSearchIcon = () => this.getJobItems()
@@ -321,6 +321,25 @@ class Jobs extends Component {
       default:
         return null
     }
+  }
+
+  getJobDetailView = async () => {
+    this.setState({apiStatus: apiStatusUpdates.progress})
+    const {match} = this.props
+    const {params} = match
+    const {id} = params
+    const jwtToken = Cookies.get('jwt_token')
+    const url = `https://apis.ccbp.in/jobs/${id}`
+    const options = {
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+      method: 'GET',
+    }
+
+    const response = await fetch(url, options)
+    const data = await response.json()
+    console.log(data)
   }
 
   render() {
