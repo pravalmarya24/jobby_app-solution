@@ -5,6 +5,7 @@ import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import JobItems from '../JobItems'
 import Header from '../Header'
+import JobDetailView from '../JobDetailView'
 
 const employmentTypesList = [
   {
@@ -63,7 +64,6 @@ class Jobs extends Component {
   componentDidMount = () => {
     this.getProfileDetails()
     this.getJobItems()
-    this.getJobDetailView()
   }
 
   renderLoader = () => (
@@ -213,6 +213,7 @@ class Jobs extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
+    console.log(data)
 
     if (response.ok === true) {
       const updatedData = data.jobs.map(each => ({
@@ -321,25 +322,6 @@ class Jobs extends Component {
       default:
         return null
     }
-  }
-
-  getJobDetailView = async () => {
-    this.setState({apiStatus: apiStatusUpdates.progress})
-    const {match} = this.props
-    const {params} = match
-    const {id} = params
-    const jwtToken = Cookies.get('jwt_token')
-    const url = `https://apis.ccbp.in/jobs/${id}`
-    const options = {
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-      method: 'GET',
-    }
-
-    const response = await fetch(url, options)
-    const data = await response.json()
-    console.log(data)
   }
 
   render() {
