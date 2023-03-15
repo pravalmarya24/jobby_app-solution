@@ -5,7 +5,6 @@ import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import JobItems from '../JobItems'
 import Header from '../Header'
-import JobDetailView from '../JobDetailView'
 
 const employmentTypesList = [
   {
