@@ -8,10 +8,16 @@
   border-width: 0px;
   border-radius: 10px;
   background-color: #202020;
-  width: 430px;
+  width: 410px;
   padding: 20px;
   margin: 14px;
   margin-left: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .job-detail-item-card-container {
+    width: 660px;
+  }
 }
 
 .company-detail-logo-container {
@@ -127,11 +133,23 @@
   margin-top: 20px;
 }
 
+@media screen and (min-width: 576px) {
+  .detail-description-heading {
+    font-size: 16px;
+  }
+}
+
 .detail-description-para {
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
   color: #f1f5f9;
+}
+
+@media screen and (min-width: 576px) {
+  .detail-description-para {
+    font-size: 16px;
+  }
 }
 
 .skill-para {
@@ -146,6 +164,12 @@
   flex-wrap: wrap;
 }
 
+.skill-unordered-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
 .skill-img-container {
   display: flex;
   align-items: center;
@@ -158,12 +182,31 @@
   width: 30px;
 }
 
+@media screen and (min-width: 576px) {
+  .skill-img-size {
+    height: 40px;
+    width: 40px;
+  }
+}
+
 .skill-img-para {
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: 400;
   color: #f1f5f9;
   padding-left: 15px;
+}
+
+@media screen and (min-width: 576px) {
+  .skill-img-para {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .life-at-company-container {
+    display: flex;
+  }
 }
 
 .life-at-com-heading {
@@ -173,12 +216,30 @@
   color: #f1f5f9;
 }
 
+@media screen and (min-width: 576px) {
+  .life-at-com-heading {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .life-at-company-img {
+    padding-left: 14px;
+  }
+}
+
 .life-at-company-description-para {
   font-family: 'Roboto';
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   color: #f1f5f9;
   width: 350px;
+}
+
+@media screen and (min-width: 576px) {
+  .life-at-company-description-para {
+    font-size: 16px;
+  }
 }
 
 .similar-job-heading {
@@ -191,6 +252,8 @@
 .similar-unordered-list {
   list-style-type: none;
   padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .similar-job-item-card-container {

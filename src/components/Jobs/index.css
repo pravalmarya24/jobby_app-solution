@@ -263,6 +263,17 @@
   align-items: center;
   justify-content: center;
   margin-left: 130px;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .no-job-found-container {
+    margin-left: 0;
+  }
+}
+
+.no-job-found-img {
+  width: 100%;
 }
 
 .no-jobs-para {

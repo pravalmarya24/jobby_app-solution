@@ -57,7 +57,8 @@ class Jobs extends Component {
     apiStatus: apiStatusUpdates.initial,
     jobsList: [],
     searchInput: '',
-    jobDetailViewList: [],
+    minimumPackage: '',
+    employmentType: '',
   }
 
   componentDidMount = () => {
@@ -143,6 +144,14 @@ class Jobs extends Component {
     }
   }
 
+  onMinPackage = event => {
+    this.setState({minimumPackage: event.target.value}, this.getJobItems)
+  }
+
+  employmentType = event => {
+    this.setState({employmentType: event.target.value}, this.getJobItems)
+  }
+
   renderProfileView = () => {
     const {searchInput} = this.state
     return (
@@ -156,7 +165,14 @@ class Jobs extends Component {
             onChange={this.onTakingSearchInput}
           />
           <div className="search-icon-container">
-            <BsSearch className="search-icon" />
+            <button
+              className="search-icon-btn"
+              type="button"
+              onClick={this.onClickingSearchIcon}
+              data-testid="searchButton"
+            >
+              <BsSearch className="search-icon" />
+            </button>
           </div>
         </div>
         <div className="profile-details-container">
@@ -171,6 +187,8 @@ class Jobs extends Component {
                 type="checkbox"
                 className="checkbox"
                 id={each.employmentTypeId}
+                value={each.employmentTypeId}
+                onChange={this.employmentType}
               />
               <label className="label" htmlFor={each.employmentTypeId}>
                 {each.label}
@@ -187,7 +205,9 @@ class Jobs extends Component {
                 type="radio"
                 className="radio"
                 id={each.salaryRangeId}
-                name="salaryRange"
+                name="salary"
+                value={each.salaryRangeId}
+                onChange={this.onMinPackage}
               />
               <label className="label" htmlFor={each.salaryRangeId}>
                 {each.label}
@@ -200,10 +220,10 @@ class Jobs extends Component {
   }
 
   getJobItems = async () => {
-    const {searchInput} = this.state
+    const {searchInput, minimumPackage, employmentType} = this.state
     this.setState({apiStatus: apiStatusUpdates.progress})
     const jwtToken = Cookies.get('jwt_token')
-    const url = `https://apis.ccbp.in/jobs?search=${searchInput}`
+    const url = `https://apis.ccbp.in/jobs?search=${searchInput}&minimum_package=${minimumPackage}&employment_type=${employmentType}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -243,7 +263,7 @@ class Jobs extends Component {
         alt="no jobs"
         className="no-job-found-img"
       />
-      <p className="no-jobs-para">No Jobs Found</p>
+      <h1 className="no-jobs-para">No Jobs Found</h1>
       <p className="try-other-filter-para">
         We could not find any jobs. Try other filters
       </p>
